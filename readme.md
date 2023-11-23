@@ -21,6 +21,13 @@ Consigli del giorno:
 Buon lavoro e buon divertimento!
 
 
+1. Giocatore X prende un dado
+2. Giocatore Y prende un dado
+3. Entrambi i giocatori lanciano il dado simultaneamente
+4. Controllo i numeri sui dadi
+5. Decreto il vincitore
+
+
 
 
 
