@@ -31,35 +31,31 @@ button.addEventListener("click", function(){
 // GIOCHINO DADI
 
 
-
-
-let players = [];
-let risultati = []
-let resultone = document.getElementById("resultone");
-let resultwo = document.getElementById("resultwo");
-let winner = document.getElementById("winner");
 const play = document.getElementById("play");
 play.addEventListener("click", function(){
-    let first_player = document.getElementById("playerone").value;
-    let first_two = document.getElementById("playertwo").value;
-    players.push(first_player,first_two);
-    for(let i=0; i<players.length; i++){
-        let dado = (Math.random() * 6) + 1
-        risultati.push(dado)
-        console.log(risultati)
-        console.log(players)
-        resultone.innerHTML = risultati[1]
-        resultwo.innerHTML = risultati[2]
+    let dadoplayer = ((Math.random() * 5) + 1).toFixed(0);
+    console.log(dadoplayer)
+    let dado = ((Math.random() * 5) + 1).toFixed(0);
+    console.log(dado)
+    let playerone = document.getElementById("playerone").value;
+    console.log(playerone)
+    let playertwo = document.getElementById("playertwo").value;
+    console.log(playertwo)
+    let results = document.querySelector("h3");
+    console.log(results)
+    let winner;
+
+    if(dadoplayer > dado){
+        winner = `${playerone} ha Vinto!`
     }
-    if(resultone>resultwo){
-        winner.innerHTML = "Giocatore 1 vince"
-    }
-    else if(resultone = resultwo){
-        winner.innerHTML = "Pareggio"
+    else if (dadoplayer < dado){
+        winner = `${playertwo} ha Vinto!`
     }
     else{
-        winner.innerHTML = "Giocatore 2 vince"
+        winner = "Pareggio"
     }
+
+    results.innerHTML = winner;
 })
 
 
